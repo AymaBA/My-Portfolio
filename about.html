@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/about.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>À Propos</title>
+</head>
+<body>
+
+    <div id="header">
+                <div class="hamburger">
+                    <span class="sp1"></span>
+                    <span class="sp2"></span>
+                    <span class="sp3"></span>
+                </div>
+        
+                <a class="title" href="index.html">Ayman</a>
+               
+        
+                <div class="nav">
+                   <div class="groupLink">
+                    <a href="about.html" class="link">à propos <i class="fas fa-address-card"></i></a>
+                    <a href="contact.php" class="link">contact  <i class="fas fa-envelope"></i></a>
+                    <a href="index.html" class="link">Accueil <i class="fas fa-home"></i></a>
+                   </div>
+                </div>
+    </div>
+
+<div class="box">
+    <div class="imgBx">
+        <img src="img\photo.jpg" alt="" >
+    </div>
+    <ul class="socail icon">
+        <li><a href="#"></a></li>
+    </ul>
+</div>
+
+
+<script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="crossorigin="anonymous"></script>
+<script >
+$(".hamburger").click( function(e){
+                    e.preventDefault();
+                    $(".nav").toggleClass("nav1");
+                    $(".sp1").toggleClass("sp1-2")
+                    $(".sp2").toggleClass("sp2-2")
+                    $(".sp3").toggleClass("sp3-2")
+                    // $(".hamburger").toggleClass("hamburger1")
+            });
+</script>
+</body>
+</html>
