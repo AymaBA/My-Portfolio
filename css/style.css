@@ -62,7 +62,7 @@
     background-position: center;
 }
 
-h1{
+.welcome{
     text-align: center;
     color: white;
     background-color: rgba(160, 255, 180, 0.466) ;
@@ -100,14 +100,17 @@ h1{
 }
 
 .sp1{
+    transform-origin: 0;
     transition: transform 0.3s ease-in-out;
     width: 50px;
 }
 .sp2{
+    transform-origin: 0;
     transition: transform 0.3s ease-in-out;
     width: 40px;
 }
 .sp3{
+    transform-origin: 0;
     transition: transform 0.3s ease-in-out;
     width: 20px;
 }
@@ -117,7 +120,10 @@ h1{
     transition: transform 0.3s ease-in-out;
     transform-origin: 0;
     width: 50px;
-    transform:translateY(0) rotateZ(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
     
 }
 .sp2-2{
@@ -129,7 +135,10 @@ h1{
     transition: transform 0.3s ease-in-out;
     transform-origin: 0;
     width: 50px;
-    transform:translateY(0) rotateZ(-45deg);
+    -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .hamburger span{
@@ -259,6 +268,7 @@ h1{
         opacity: 1;
         visibility: visible;
         transition: all 0.3s ;
+        z-index: 15;
     }
     .link{
        
@@ -270,7 +280,7 @@ h1{
         margin-top: 20px ;
         font-weight: bold;
     }
-    h1{
+    .welcome{
         margin: 0;
         text-align: center;
         width:80%;
@@ -298,12 +308,17 @@ h1{
         display: block;
         position: fixed;
         right: 10px;
-        z-index: 9999;
+        z-index: 999;    
         
     }
     .hamburger1{
         margin-top: 3.5px;
         transform: translateY(20p);
+    }
+
+    .title1{
+        position: relative;
+        z-index: 999; 
     }
 
    

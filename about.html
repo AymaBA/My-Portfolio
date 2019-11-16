@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="/css/about.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="crossorigin="anonymous"></script>
     <title>À Propos</title>
 </head>
 <body>
@@ -30,26 +32,36 @@
     </div>
 
 <div class="box">
+
     <div class="imgBx">
-        <img src="img\photo.jpg" alt="" >
+        <img class="pp" width="400px" src="img\photo.jpg">
     </div>
-    <ul class="socail icon">
-        <li><a href="#"></a></li>
+    
+    <ul class="socail-icon">
+        <li><a href="https://www.instagram.com/aymaprod/?hl=fr" target="blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://github.com/AymaBA" target="blank"><i class="fab fa-github"></i></a></li>
     </ul>
+
+    <div class="details">
+        <h2>Ayman Ben Abdellah <br><span>JAVASCRIPT / HTML / CSS</span></h2>
+    </div>
+
 </div>
 
 
 <script src="js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="crossorigin="anonymous"></script>
 <script >
-$(".hamburger").click( function(e){
-                    e.preventDefault();
-                    $(".nav").toggleClass("nav1");
-                    $(".sp1").toggleClass("sp1-2")
-                    $(".sp2").toggleClass("sp2-2")
-                    $(".sp3").toggleClass("sp3-2")
-                    // $(".hamburger").toggleClass("hamburger1")
-            });
+        $(".hamburger").click( function(e){
+                            e.preventDefault();
+                            $(".nav").toggleClass("nav1");
+                            $(".sp1").toggleClass("sp1-2")
+                            $(".sp2").toggleClass("sp2-2")
+                            $(".sp3").toggleClass("sp3-2")
+                            $(".title").toggleClass(".title1");
+                            $(".box").toggleClass('box2');
+                            // $(".hamburger").toggleClass("hamburger1")
+                    });
 </script>
 </body>
 </html>

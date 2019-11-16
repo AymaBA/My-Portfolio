@@ -1,0 +1,108 @@
+body{
+    background-color: rgb(221, 221, 221);
+    
+}
+.imgBx:hover {
+    transform: translateY(-100px);
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 500px;
+    background: rgb(0, 0, 0);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #000000;
+
+}
+.box2{
+    z-index: -1;
+}
+.imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    z-index: 2;
+    background: #000000;
+}
+
+.imgBx img{
+    transition: 0.3s;
+}
+
+.box:hover .imgBx img{
+    opacity: 0.5;
+}
+
+.socail-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    z-index: 2;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.socail-icon li{
+    list-style: none;
+}
+
+.socail-icon li a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #fff;
+    color: #262626;
+    margin: 0 5px;
+    border-radius: 50px ;
+    transition: 0.3s ;
+    transform: translateY(150px);
+    opacity: 0;
+    font-size: 30px;
+}
+
+.box:hover .socail-icon li a{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.box:hover .socail-icon li:nth-child(1) a{
+    transition-delay: 0;
+}
+.box:hover .socail-icon li:nth-child(2) a{
+    transition-delay: 0.09s;
+}
+.details{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    z-index: 4;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    z-index: 1;
+}
+
+.details h2{
+    margin: 10px 0 0;
+    text-align: center;
+    padding: 0;
+}
+
+.details h2 span{
+    color: #bbb;
+    font-size: 15px;
+}
