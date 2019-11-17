@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(105, 105, 105);
+    background-color: #1abc9c;
     
 }
 
@@ -113,4 +113,86 @@ body{
 }
 
 /* ----------------------------------------------------------------Card skill*/
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    /* background: red; */
+    height: 600px;
+}
+.skll{
+    border-radius: 7px ;
+    background:linear-gradient(90deg,#2d353d,#24313f);
+    width: 30%;
+    height:513px;
+    margin: 10px auto;
+    
+}
 
+.number{
+    position: initial;
+    bottom: 0%;
+    top: 56%;
+}
+
+.ligne{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 35px;
+    background: #359fe6;
+    border-radius: 50px ;
+    margin: 1;
+    padding: 10px;
+}
+
+.pourcentage1{
+    transition: 0.3s;
+    width: 60%;
+    height: 35px;
+    border-radius: 50px ;
+    line-height: 35px;
+    background: #5dbeff;
+    z-index: 1;
+}
+
+.pourcentage2{
+    transition: 0.3s;
+    width: 85%;
+    height: 35px;
+    border-radius: 50px ;
+    line-height: 35px;
+    background: #5dbeff;
+    z-index: 1;
+}
+
+.pourcentage3{
+    transition: 0.3s;
+    width: 90%;
+    height: 35px;
+    border-radius: 50px ;
+    line-height: 35px;
+    background: #5dbeff;
+    z-index: 1;
+}
+.html{
+    margin: 10px 25% 10px;
+}
+.text{
+    background-color: rgb(255, 255, 255);
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 7px ;
+}
+
+
+
+@media screen and(max-width:1024px){
+    .container{ 
+        display: block;
+    }
+}
