@@ -1,13 +1,18 @@
 body{
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(105, 105, 105);
     
 }
+
+/* Card Hover */
+
 .imgBx:hover {
     transform: translateY(-100px);
 }
 .box{
-    position: absolute;
-    top: 50%;
+    display: block;
+    margin-top: 400px;
+    position: relative;
+    top: 100%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 400px;
@@ -19,7 +24,7 @@ body{
 
 }
 .box2{
-    z-index: -1;
+   z-index: -1;
 }
 .imgBx{
     position: absolute;
@@ -106,3 +111,6 @@ body{
     color: #bbb;
     font-size: 15px;
 }
+
+/* ----------------------------------------------------------------Card skill*/
+
