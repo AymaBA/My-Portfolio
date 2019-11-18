@@ -520,7 +520,8 @@ body{
         background-color: #fff;
     }
     .myCs{
-        width: 70%;
+        width: 80%;
+        font-size: 45px;
     }
     .nav{
         position: fixed;
