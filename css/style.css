@@ -317,6 +317,10 @@
         transform: translateY(20p);
     }
 
+    .title{
+        line-height: 60px;
+    }
+
     .title1{
         position: relative;
         z-index: 999; 
