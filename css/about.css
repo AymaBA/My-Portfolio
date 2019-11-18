@@ -438,7 +438,7 @@ body{
     background: #5dbeff;
     z-index: 1;
     animation-name: pourcentage1;
-    animation-duration:.5s;
+    animation-duration:10s;
 }
 
 .pourcentage2{
@@ -480,11 +480,11 @@ body{
 }
 
 .myCs{
-  margin: 100px auto;
+  margin: 0 auto;
   text-align: center;
   font-size: 100px ;
   color: #f8f8f8;
-  width: 700px;
+  width: 900px;
   background: #54a0ff;
   border-radius: 20px ;
   padding: 20px;
