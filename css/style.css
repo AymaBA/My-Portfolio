@@ -18,7 +18,7 @@
     font-size: 22px;
     transition: 0.3s all;
     font-weight: bold;
-    box-shadow: 5px 5px 5px  5px gray;
+    box-shadow: 5px 5px 5px  5px rgb(0, 0, 0);
     border-radius: 50px;
 }
 
@@ -56,11 +56,21 @@
     user-select: none;
     z-index: 999999999999;
 }
-#particles-js{
+/* #particles-js{
     background: url(../img/fond.jpg);
     background-size: cover;
     height: 100vh;
     background-position: center;
+} */    
+
+#background{
+    /* background: url(../img/fond.jpg); */
+    background: #71deff;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    position: fixed;
+    z-index: -1;
 }
 
 .welcome{
