@@ -1,33 +1,3 @@
-function rgbToHex(rgb) {
-	var hex = Number(Math.round(rgb)).toString(16);
-	if (hex.length < 2)
-		hex = "0" + hex;
-	return hex;
-}
-
-function fullColorHex(red, green, blue) {
-	var red = rgbToHex(red);
-	var green = rgbToHex(green);
-	var blue = rgbToHex(blue);
-	return "#" + red + green + blue;
-}
-
-function getColor(degree) {
-	const dark = 200;
-	if (degree < 255)
-		return fullColorHex(255 - dark, degree * (255 - dark) / 255, 0);
-	degree -= 255;
-	if (degree < 255)
-		return fullColorHex((255 - dark) - degree * (255 - dark) / 255, 255 - dark, 0);
-	degree -= 255;
-	if (degree < 255)
-		return fullColorHex(0, 255 - dark, degree * (255 - dark) / 255);
-	degree -= 255;
-	if (degree < 255)
-		return fullColorHex(0, (255 - dark) - degree * (255 - dark) / 255, 255 - dark);
-	return "white";
-}
-
 class Particle {
 	constructor(canvas) {
 		this.canvas = canvas;
@@ -46,7 +16,7 @@ class Particle {
 		this.particles.push({
 			distance: distance,
 			diameter: diameter,
-			color: getColor(Math.random() * 1024),
+			color: "black",
 			position: {
 				x: x,
 				y: y
