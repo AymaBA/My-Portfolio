@@ -44,3 +44,34 @@ window.addEventListener("scroll",()=>{
 })
 
 
+
+window.onload = () =>{
+    window.sr = new ScrollReveal();
+
+    sr.reveal(".skll",{
+        scale: 0.8,
+        origin:"top",
+        distance:"50px", 
+        reset: true,
+        duration:1000
+    },50)
+
+    sr.reveal(".box",{
+        delay:200,
+        origin:"left",
+        distance:"100px", 
+        reset: true,
+        duration:1000
+    })
+
+    sr.reveal(".myCs",{
+        scale: 0.3,
+        delay:300,
+        origin:"right",
+        distance:"100px", 
+        reset: true,
+        duration:1000
+    })
+
+   
+   }
