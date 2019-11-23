@@ -53,8 +53,9 @@ window.onload = () =>{
         origin:"top",
         distance:"50px", 
         reset: true,
-        duration:1000
-    },50)
+        duration:1000,
+        interval: 100
+    })
 
     sr.reveal(".box",{
         delay:200,
