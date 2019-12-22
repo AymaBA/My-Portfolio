@@ -1,39 +1,34 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-
-    <link rel="stylesheet" href="css\style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <link rel="stylesheet" href="css/contact.css">
     <meta charset="UTF-8">
     <link rel="icon" href="img/logo4.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
     <title>Ayman | Développeur Front End</title>
     <meta name="title" content="Ayman | Développeur Front End ">
-    <meta name="description"
-        content="Créateur de site Web en HTML, CSS et JAVASCRIPT adapté au smartphone. Je suis un étudiant français passionné par le développement et la programmation depuis toujours.">
+    <meta name="description" content="Créateur de site Web en HTML, CSS et JAVASCRIPT adapté au smartphone. Je suis un étudiant français passionné par le développement et la programmation depuis toujours.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ayma-dev.tk/">
     <meta property="og:title" content="Ayman | Développeur Front End ">
-    <meta property="og:description"
-        content="Créateur de site Web en HTML, CSS et JAVASCRIPT adapté au smartphone. Je suis un étudiant français passionné par le développement et la programmation depuis toujours.">
+    <meta property="og:description" content="Créateur de site Web en HTML, CSS et JAVASCRIPT adapté au smartphone. Je suis un étudiant français passionné par le développement et la programmation depuis toujours.">
     <meta property="og:image" content="https://ayma-dev.tk/img/logo-meta.jpg">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ayma-dev.tk/">
     <meta property="twitter:title" content="Ayman | Développeur Front End ">
-    <meta property="twitter:description"
-        content="Créateur de site Web en HTML, CSS et JAVASCRIPT adapté au smartphone. Je suis un étudiant français passionné par le développement et la programmation depuis toujours.">
+    <meta property="twitter:description" content="Créateur de site Web en HTML, CSS et JAVASCRIPT adapté au smartphone. Je suis un étudiant français passionné par le développement et la programmation depuis toujours.">
     <meta property="twitter:image" content="https://ayma-dev.tk/img/logo-meta.jpg">
+    <title>Contact</title>
 </head>
 
 <body>
 
-    <div id="particles-js"><h1 class="welcome">Bienvenue</h1></div>
-    </div>
-    <!-- <canvas id="background">
-        This text is displayed if your browser does not support HTML5 Canvas.
-    </canvas> -->
     <div id="loader" class="loader">
         <div class="loader-inner">
             <div class="loader-line-wrap">
@@ -73,22 +68,35 @@
         </div>
     </div>
 
-    <script src="js\particles.min.js"></script>
-    <script src="js\app.js"></script>
-    <!-- <script src="js/api-parti.js"></script>
-    <script src="js/app-parti.js"></script> -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <form id="contact" method="post">
+        <p id="succes">Merci de m'avoir contacter , je reviens vers vous très bientôt.</p>
+        <div class="txt">
+            <input type="text" placeholder="Nom" name="nom" id="in-text" >
+            <input type="email"  placeholder="Email " name="email" id="in-email" >
+        </div>
+        <input type="phone" name="phone" id="phone" placeholder="Téléphone" >
+        <textarea placeholder="Message"  name="message" id="" ></textarea>
+        <button type="submit">Envoyer <i class="fas fa-paper-plane"></i></button>
+    </form>
+
+
+
+
+
     <script src="js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script>
-        $(".hamburger").click(function (e) {
-            e.preventDefault();
+        $(".hamburger").click(function(e) {
+
             $(".nav").toggleClass("nav1");
             $(".sp1").toggleClass("sp1-2")
             $(".sp2").toggleClass("sp2-2")
             $(".sp3").toggleClass("sp3-2")
-            $(".title").toggleClass("title1")
+            $(".title").toggleClass("title1");
+            $(".box").toggleClass('box2');
+
         });
     </script>
 </body>

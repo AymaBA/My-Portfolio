@@ -2,8 +2,18 @@
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
 }
 
+body {
+    background: linear-gradient(125deg, #4cbcfd, #00FFFF);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 #header {
     position: fixed;
@@ -11,11 +21,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 55px;
 }
 
 .link:hover {
-    background-color: #FAD961;
+    background-color: #71deff;
     font-size: 22px;
     transition: 0.3s all;
     font-weight: bold;
@@ -60,16 +70,15 @@
     z-index: 999999999999;
 }
 
-#particles-js{
-    background-color: #FAD961;
-    background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+/* #particles-js{
+    background: url(../img/fond.jpg);
     background-size: cover;
     height: 100vh;
     background-position: center;
-}
+} */
 
 #background {
-    background: url(../img/fond.jpg);
+    /* background: url(../img/fond.jpg); */
     background: #71deff;
     background-size: cover;
     height: 100vh;
@@ -78,26 +87,7 @@
     z-index: -1;
 }
 
-.welcome {
-    text-align: center;
-    color: white;
-    background-color: rgba(160, 255, 180, 0.466);
-    padding: 15px;
-    border-radius: 20px;
-    vertical-align: auto;
-    font-size: 5em;
-    text-transform: uppercase;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: solid 13px white;
-    pointer-events: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
+
 
 .hamburger {
     align-items: center;
@@ -293,6 +283,164 @@
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 50px;
+    border-radius: 40px;
+    width: 50%;
+}
+
+form input {
+
+    height: 60px;
+    position: relative;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(216, 216, 216);
+    margin: 40px 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+    outline: none;
+}
+
+form input:focus {
+    animation: input ease-in-out 0.5s;
+    animation-iteration-count: forwards;
+}
+
+.txt {
+    display: flex;
+}
+
+form input::placeholder {
+    font-size: 40px;
+}
+
+.txt input {
+    width: 50%;
+    position: relative;
+    left: 25%;
+    transform: translateX(-25%);
+    margin: 0;
+}
+
+#in-text {
+    position: relative;
+    left: 10%;
+}
+
+#in-email {
+    position: relative;
+    left: 15%;
+}
+
+#phone {
+    width: 105%;
+}
+
+form textarea {
+
+    outline: none;
+    position: relative;
+    left: 50%;
+    width: 10%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(216, 216, 216);
+    /* margin: px ; */
+    height: 200px;
+    min-height: 100px;
+    min-width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 15px;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+form textarea::placeholder {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 5px;
+    text-align: center;
+}
+
+form button {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    border-radius: 15px;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    outline: none;
+    transition: 0.3s;
+}
+
+#succes {
+    padding: 20px;
+    text-align: center;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, rgb(140, 213, 255) 0%, #80D0C7 100%);
+    color: black;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    display: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form button .fas {
+    font-size: 40px;
+    margin: 0 5px;
+    vertical-align: middle;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: rgb(138, 255, 138);
+
+
+}
+
+form button:hover i {
+    display: block;
+    opacity: 1;
+    transition: 0.3s;
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+@keyframes input {
+    to {
+        box-shadow: rgb(172, 255, 172) 0px 0px 80px 30px;
+        opacity: 0.89;
+
+    }
+
+}
 
 @media screen and (max-width: 1024px) {
     .link:hover {
@@ -330,13 +478,6 @@
         font-weight: bold;
     }
 
-    .welcome {
-        margin: 0;
-        text-align: center;
-        width: 80%;
-        font-size: 2.9em;
-        padding: 5px;
-    }
 
     .groupLink1 {
         position: absolute;
@@ -344,6 +485,19 @@
         left: 50%;
         transform: translateX(-50%, -50%);
 
+    }
+
+    .txt {
+        display: block;
+        width: 100%;
+    }
+
+    .txt input {
+        width: 110%;
+        position: absolute;
+        left: 25%;
+        transform: translateX(-25%);
+        margin: 25px 0;
     }
 
     .groupLink {
@@ -363,9 +517,42 @@
 
     }
 
+    form {
+        padding: 10px;
+        width: 90%;
+        z-index: 89;
+        margin-top: 50px;
+    }
+
+    form input {
+        width: 70%;
+    }
+
     .hamburger1 {
         margin-top: 3.5px;
         transform: translateY(20p);
+    }
+
+    #in-email {
+        position: relative;
+        left: 50%;
+        width: 90%;
+        transform: translateX(-50%);
+        font-size: 25px;
+    }
+
+    #in-text {
+        position: relative;
+        left: 50%;
+        width: 90%;
+        transform: translateX(-50%);
+        font-size: 25px;
+    }
+
+    #phone {
+        content: "Téléphone";
+        width: 90%;
+        font-size: 25px;
     }
 
     .title {
@@ -375,6 +562,14 @@
     .title1 {
         position: relative;
         z-index: 999;
+    }
+
+    form textarea {
+        height: 200px;
+        min-height: 100px;
+        min-width: 80%;
+        max-width: 80%;
+
     }
 
 
