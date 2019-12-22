@@ -40,12 +40,12 @@ if (!empty($_POST['nom']) AND !empty($_POST['email']) AND !empty($_POST['phone']
         </html>`;
 
 
-        $headers = 'From: webmaster@example.com' . "\r\n" .
+        $headers = 'From: '.$email.'' . "\r\n" .
         'Reply-To:'.$email.  "\r\n" .
         'Content-type: text/html; charset=iso-8859-1'."\r\n".
         'X-Mailer: PHP/' . phpversion();
 
-        mail($to, $subject, $message_final, $headers);
+        // mail($to, $subject, $message_final, $headers);
 
         $succes = 1;
         $msg = "Send!";
