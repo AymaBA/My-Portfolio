@@ -61,3 +61,6 @@ if (!empty($_POST['nom']) AND !empty($_POST['email']) AND !empty($_POST['phone']
 $res = ["succes"=>$succes,"msg"=>$msg];
 
 echo json_encode($res);
+
+
+?>

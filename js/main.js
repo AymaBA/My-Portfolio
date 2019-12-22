@@ -124,11 +124,9 @@ contactForm.addEventListener("submit", (e) => {
                 
                 setTimeout(() => {
                     load.style.transform = "translateY(0%)"
-                }, 5000);
-                setTimeout(() => {
-                    load.style.transform = "translateY(0%)"
                     document.location.href = "index.html"
-                }, 6000);
+                }, 4000);
+
                 
                 
             } else {
