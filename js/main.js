@@ -103,52 +103,52 @@ const contactForm = document.querySelector("#contact")
 
 try {
 
-contactForm.addEventListener("submit", (e) => {
-    e.preventDefault()
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault()
 
-    let data = new FormData(contactForm);
+        let data = new FormData(contactForm);
 
-    var xhr = new XMLHttpRequest()
+        var xhr = new XMLHttpRequest()
 
-    xhr.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.response)
-            const res = this.response
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(this.response)
+                const res = this.response
 
-            if (res.succes) {
-                // alert(res.msg)
-                contactForm.reset();
-                document.createElement("p").setAttribute("id", "succes");
-                document.querySelector("#succes").style.display="block";
-                // document.getElementsById("contact").style.marginTop ="50px"
-                
-                setTimeout(() => {
+                if (res.succes) {
+                    // alert(res.msg)
+                    contactForm.reset();
+                    document.createElement("p").setAttribute("id", "succes");
+                    document.querySelector("#succes").style.display = "block";
+                    // document.getElementsById("contact").style.marginTop ="50px"
 
-                    document.location.href = "index.html"
-                }, 6000);
-                setTimeout(() => {
-                load.style.transform = "translateY(0%)"
+                    setTimeout(() => {
 
-                }, 5000);
-                
-            } else {
-                alert(res.msg)
-            }   
-        } else if (this.readyState == 4) {
-            alert("une erreur est survenu")
-        }
-    };
+                        document.location.href = "index.html"
+                    }, 6000);
+                    setTimeout(() => {
+                        load.style.transform = "translateY(0%)"
 
-    xhr.open("POST", "/async/script.php", true);
-    xhr.responseType = "json";
-    xhr.send(data);
-    
-    return false
-   
-})
+                    }, 5000);
+
+                } else {
+                    alert(res.msg)
+                }
+            } else if (this.readyState == 4) {
+                alert("une erreur est survenu")
+            }
+        };
+
+        xhr.open("POST", "../async/script.php", true);
+        xhr.responseType = "json";
+        xhr.send(data);
+
+        return false
+
+    })
 
 } catch (error) {
     console.log(error);
-    
+
 }
 
