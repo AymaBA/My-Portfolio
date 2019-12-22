@@ -112,7 +112,7 @@ contactForm.addEventListener("submit", (e) => {
 
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.response);
+            console.log(this.response)
             const res = this.response
 
             if (res.succes) {
@@ -123,11 +123,13 @@ contactForm.addEventListener("submit", (e) => {
                 // document.getElementsById("contact").style.marginTop ="50px"
                 
                 setTimeout(() => {
-                    load.style.transform = "translateY(0%)"
-                    document.location.href = "index.html"
-                }, 4000);
 
-                
+                    document.location.href = "index.html"
+                }, 6000);
+                setTimeout(() => {
+                load.style.transform = "translateY(0%)"
+
+                }, 5000);
                 
             } else {
                 alert(res.msg)
@@ -137,7 +139,7 @@ contactForm.addEventListener("submit", (e) => {
         }
     };
 
-    xhr.open("POST", "async/script.php", true);
+    xhr.open("POST", "/async/script.php", true);
     xhr.responseType = "json";
     xhr.send(data);
     
