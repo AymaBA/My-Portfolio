@@ -139,9 +139,15 @@ try {
             }
         };
 
-        xhr.open("POST", "../async/script.php", true);
+        xhr.open("POST", "async/script.php", true);
         xhr.responseType = "json";
-        xhr.send(data);
+        try {
+            xhr.send(data);
+        } catch (error) {
+            setTimeout(xhr.send(data), 1000)
+            console.log("Error : (send data)");
+            
+        }
 
         return false
 
