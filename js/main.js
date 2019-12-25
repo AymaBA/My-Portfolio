@@ -100,42 +100,56 @@ try {
 }
 
 const contactForm = document.querySelector("#contact")
-
+let send = false
+ 
 try {
 
     contactForm.addEventListener("submit", (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        if (send == true ) {
+            return;
+        }
+        send = true;
 
         let data = new FormData(contactForm);
 
-        var xhr = new XMLHttpRequest()
+        let xhr = new XMLHttpRequest();
 
         xhr.onreadystatechange = function () {
+            
             if (this.readyState == 4 && this.status == 200) {
                 console.log(this.response)
-                const res = this.response
+                
+                const res = this.response;
 
                 if (res.succes) {
+                    
                     // alert(res.msg)
                     contactForm.reset();
+                    // contactForm.style.marginTop = "100px";
                     document.createElement("p").setAttribute("id", "succes");
                     document.querySelector("#succes").style.display = "block";
-                    // document.getElementsById("contact").style.marginTop ="50px"
+                    document.querySelector("#succes").style.opacity = "1";      
+                    // return false;
 
                     setTimeout(() => {
-
-                        document.location.href = "index.html"
+                        document.location.href = "index.html";
                     }, 6000);
                     setTimeout(() => {
-                        load.style.transform = "translateY(0%)"
-
+                        load.style.transform = "translateY(0%)";
                     }, 5000);
-
+                    document.querySelector("#error").style.display = "none";
                 } else {
-                    alert(res.msg)
+                    send = false;
+                    // contactForm.style.marginTop = "100px";
+                    document.querySelector("#error").style.display = "block";
+                    document.querySelector("#error").textContent = res.msg;
+                    document.querySelector("#succes").style.display = "none";
+                    // alert(res.msg);
                 }
             } else if (this.readyState == 4) {
-                alert("une erreur est survenu")
+                alert("Une erreur est survenu (404 not found)");
+                return false;
             }
         };
 
@@ -146,10 +160,9 @@ try {
         } catch (error) {
             setTimeout(xhr.send(data), 1000)
             console.log("Error : (send data)");
-            
         }
 
-        return false
+        return false;
 
     })
 
@@ -157,4 +170,5 @@ try {
     console.log(error);
 
 }
+
 

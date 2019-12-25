@@ -1,0 +1,36 @@
+form{
+    width: 400px;
+    margin:20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.144);
+    border-radius: 10px ;
+    
+}
+
+form input{
+    margin: 10px auto;
+    width: 300px;
+}
+
+h4{
+    height: 40px;
+    width: 80px;
+    margin:190px auto !important; 
+    background-color: royalblue;
+}
+
+@media screen and (max-width :1024px){
+    form{
+        width: 90%;
+        margin:20px auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.144);
+        border-radius: 10px ;
+        
+    }
+    
+    form input{
+        margin: 10px auto;
+        width: 90%;
+    }
+}

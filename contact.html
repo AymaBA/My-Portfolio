@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -69,13 +69,15 @@
     </div>
 
 
+
     <form id="contact" action="async/script.php" method="post">
-        <p id="succes">Merci de m'avoir contacter , je reviens vers vous très bientôt.</p>
+        <p id="succes">Merci de m'avoir contacté , je reviens vers vous très bientôt.</p>
+        <p id="error"></p>
         <div class="txt">
             <input type="text" placeholder="Nom" name="nom" id="in-text" >
             <input type="email"  placeholder="Email " name="email" id="in-email" >
         </div>
-        <input type="phone" name="phone" id="phone" placeholder="Téléphone" >
+        <input type="tel" name="phone" id="phone" placeholder="Téléphone" >
         <textarea placeholder="Message"  name="message" id="" ></textarea>
         <button type="submit">Envoyer <i class="fas fa-paper-plane"></i></button>
     </form>
